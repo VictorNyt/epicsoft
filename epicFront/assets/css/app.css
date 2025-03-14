@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #2d2d2d;
+    color: aliceblue;
+}
+
+body::before {
+    background-image: url("~/assets/images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* nav {
+    height: 100vh;
+} */
+
+nav ul {
+    position: fixed;
+    list-style: none;
+    width: 150px;
+    height: 100%;
+    background-color: #3c3c3c;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+nav ul li a {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+nav ul li a:hover {
+    background-color: #05ac87;
+}
+
+.menu.show {
+    width: 150px;
+}
+
+.hamburguer {
+    margin: 5px 5px;
+    position: fixed;
+    z-index: 10;
+    display: none;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field input {
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #05ac87;
+    border: none;
+    padding: 10px 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .menu {
+        width: 0;
+        padding-top: 30px;
+        z-index: 9;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+}
